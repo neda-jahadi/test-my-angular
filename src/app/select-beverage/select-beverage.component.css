@@ -1,0 +1,21 @@
+.beverageBorder {
+    border: solid hotpink 1px;
+    background-color: pink;
+    color: black;
+    width:30%;
+    padding: 1em;
+    margin: 5px;
+    font-size: large;
+    border-radius: 5px;
+    display: flex;
+     justify-content: space-between;
+}
+button {
+        
+        background-color: lightslategray;
+        font-size: large;
+        border: none;
+        border-radius: 5px;
+        padding: 0.5em;
+    
+}

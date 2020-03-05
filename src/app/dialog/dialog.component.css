@@ -1,0 +1,29 @@
+.welcome {
+    border: solid 1px #6A0888;
+    background-color: #6A0888;
+    border-radius: 5px;
+	color: white;
+    padding: 1em;
+    text-align: center;
+    margin: 0.5em;
+    font-size: large;
+}
+input, button{
+    padding: 1em;
+    margin-right: 1em;
+    border-radius: 5px;
+    border: none;
+}
+.beverageChoose{
+    font-size: large;
+    border: 1px white;
+    margin-top: 1em;
+}
+button {
+    background-color: lightslategray;
+    font-size: large;
+}
+.whatDrink {
+    font-size: x-large;
+    
+}

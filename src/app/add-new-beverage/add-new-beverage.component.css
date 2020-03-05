@@ -1,0 +1,10 @@
+input, button{
+    padding: 1em;
+    margin-right: 1em;
+    border-radius: 5px;
+    
+}
+button {
+    background-color: lightslategray;
+    
+}

@@ -1,0 +1,6 @@
+
+<div *ngIf="authorized">
+	<input type="text" placeholder=" beverage..."
+	 	(keyup)="onKeyUp2($event)" /> 
+	<button (click)="saveBeverage()">Add new Beverage</button>
+</div>

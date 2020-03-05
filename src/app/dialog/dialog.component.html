@@ -1,0 +1,66 @@
+
+<div *ngIf="!authorized">
+    <div class='welcome' *ngIf="!deleted">Hello stranger! Haven't seen your face around here before.
+    
+       <div class='welcome'>What's your name?</div>
+       <div class="welcome">
+        <input type='text' placeholder="First name..." (keyup)="onKeyUpF($event)">
+        <input type='text' placeholder="Last name..." (keyup)="onKeyUpL($event)">
+        <button (click)="logIn()">Enter!</button>
+    </div> 
+
+    </div>
+    
+    
+    
+</div>
+<div  class='welcome' *ngIf="deleted">
+    Got it! Who are you again?
+    <div class="welcome">
+        <input type='text' placeholder="First name..." (keyup)="onKeyUpF($event)">
+        <input type='text' placeholder="Last name..." (keyup)="onKeyUpL($event)">
+        <button (click)="logIn()">Enter!</button>
+    </div>
+</div>
+ 
+
+
+
+<p *ngIf="hasLoggedIn" class='welcome'>
+    Alright! What can I do for you <span style="font-size: 1.5em;">{{inputValueF}} {{inputValueL}}</span>?
+    
+    
+</p>
+
+<p *ngIf="knowCustomer" class='welcome'>Hello again, {{myCustomer}}!</p>
+
+<app-the-usual *ngIf='knowCustomer'
+        
+        [thereIsBeverage]="thereIsBeverage"
+        (usual)=handleUsual($event)></app-the-usual>
+             
+
+  <div *ngIf="!deleted">
+    <div *ngIf='authorized'>
+    
+    <div class='beverageChoose' >
+        <label for="beverages">Choose a beverage:</label>
+        
+        
+    </div>
+  
+    <app-select-beverage
+        
+            *ngFor="let beverage of beverageList"
+            [beverageName]= "beverage.name"
+            (choose)=handleChoose($event)></app-select-beverage>
+    <p  class='whatDrink' *ngIf="beverageChosed">
+        One <span style="font-weight: bold ">{{whatToDrink}}</span> comming right up!
+    </p>
+ </div>
+</div>    
+    
+
+      
+  
+  

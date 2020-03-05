@@ -1,0 +1,26 @@
+<app-dialog
+  [thereIsBeverage]='thereIsBeverage'
+  
+  [deleted]='deleted'
+  [beverageList]='beverageList'
+  [authorized]='authorized'
+  [hasLoggedIn]='hasLoggedIn'
+  [knowCustomer]='knowCustomer'
+  [firstName]='firstName'                           
+  [lastName]='lastName'
+  [beverageData]='beverageData'
+  [myCustomer] ='myCustomer'
+  (onEnter)="handleEnter()"
+  ></app-dialog>
+  
+ <app-add-new-beverage
+ 
+ [authorized]='authorized'
+ (onSaveBeverage)="addNewBeverage($event)"></app-add-new-beverage
+  >
+  <br>
+  <app-delete-me 
+  [authorized]='authorized'
+  (delete)="handleDelete()">
+    
+  </app-delete-me>
